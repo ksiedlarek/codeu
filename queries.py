@@ -29,7 +29,7 @@ class QueryStream(object):
     def print_queries(self):
         start = datetime.datetime.now()
         for query in stream:
-            print '<NEW QUERY>'
+            print('<NEW QUERY>')
             for word in query:
                 print word
             stop = datetime.datetime.now()
