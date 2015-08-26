@@ -14,6 +14,7 @@ def test_has_majority():
     alist = [5, 3, 9, 4, 3, 3, 8, 3, 3]
     assert has_majority(alist) == 3
 
+
 def test_without_majority():
     alist = [5, 3, 9, 4, 3, 3, 8, 3]
-    assert has_majority(alist) == None
+    assert has_majority(alist) is None

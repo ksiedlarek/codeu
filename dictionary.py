@@ -28,12 +28,10 @@ class HashTable(object):
                     return True
         return False
 
-
     def create(self, key, data):
         entry = Entry(key, data)
         index = self.hash_function(key)
         self.content[index].append([entry])
-
 
     def hash_function(self, key):
         sum_of_letters = 0
@@ -50,11 +48,14 @@ table.create('chair', 'a tool to sit on')
 table.create('riahc', 'nonsense')
 table.create('cat', 'small animal')
 
+
 def test_simple_word():
     assert table.get('cat') == True
 
+
 def test_not_in_dict():
     assert table.get('notinside') == False
+
 
 def test_anagram():
     assert table.get('chair') == True

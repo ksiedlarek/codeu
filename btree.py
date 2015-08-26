@@ -10,12 +10,12 @@ class TreeNode(object):
             return
         else:
             if item < self.payload:
-                if self.left != None:
+                if self.left is not None:
                     self.left.insert(item)
                 else:
                     self.left = TreeNode(item)
             else:
-                if self.right != None:
+                if self.right is not None:
                     self.right.insert(item)
                 else:
                     self.right = TreeNode(item)
@@ -28,13 +28,13 @@ class TreeNode(object):
             self.right.preorder()
 
     def postorder(self, tree):
-        if tree != None:
+        if tree is not None:
             self.postorder(tree.left)
             self.postorder(tree.right)
             print(tree.payload)
 
     def inorder(self, tree):
-        if tree != None:
+        if tree is not None:
             self.inorder(tree.left)
             print(tree.payload)
             self.inorder(tree.right)

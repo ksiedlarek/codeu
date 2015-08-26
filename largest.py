@@ -45,17 +45,21 @@ def nth_largest(alist, number):
 alist = [100, 98, 200, 30000, -1, 12, 0]
 alist = merge_sort(alist)
 
+
 def test_exception_zero():
     with pytest.raises(Exception):
         nth_largest(alist, 0)
+
 
 def test_exception_to_large():
     with pytest.raises(Exception):
         nth_largest(alist, len(alist) + 1)
 
+
 def test_the_same_numbers():
     alist = [1] * 100
-    assert nth_largest(alist, 3) ==  1
+    assert nth_largest(alist, 3) == 1
+
 
 def test_large_sorted_input():
     alist = [x for x in range(500000)]
